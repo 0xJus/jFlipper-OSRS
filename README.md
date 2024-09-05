@@ -60,6 +60,10 @@ pip install -r requirements.txt
 
 ![Entity Hider](src/images/settings/entityhider.png)
 
+#### Display Settings Plugin:
+
+![Entity Hider](src/images/settings/displaysettings.png)
+
 ### 2. Enable Flipping CoPilot Plugin:
 
 **Ensure the Flipping CoPilot plugin is **ALWAYS IN VIEW** on the screen when running the script. It is needed to detect when an abort offer suggested action is displayed on the screen from the Flipping CoPilot plugin and handle the cancel order accordingly.**
@@ -68,13 +72,13 @@ pip install -r requirements.txt
 
 **Make sure the Grand Exchange window is **ALWAYS OPEN AND VISIBLE** while the script is running, Otherwise the script will exit as a result to reduce CPU usage**
 
-![Grand Exchange Window](images/ge.png)
+![Grand Exchange Window](src/images/settings/ge.png)
 
 ### 3. Ensure SETUP is CORRECT:
 
 **[IMPORTANT!] BEFORE you run the script ensure that there is nothing that could possible trigger a misclick in your view of the screen and the grand exchange, i.e other players, spells, teleports, pets, npcs etc.**
 
-![Grand Exchange Window](images/ge.png)
+![Blank Screen Example](src/images/settings/blank.png)
 
 ### Run the Script
 
