@@ -9,7 +9,11 @@ import sys
 
 # Default values for delays
 click_delay = 0.7
-sleep_delay = 0.7
+sleep_delay = 0.3
+
+# Record the start time
+start_time = time.time()
+
 
 # Configure logging
 logging.basicConfig(
@@ -19,6 +23,16 @@ logging.basicConfig(
 )
 
 window_title = "RuneLite"
+
+
+def check_resolution():
+    """Checks if the screen resolution is 1920x1080."""
+    width, height = pyautogui.size()
+    if (width, height) != (1920, 1080):
+        logging.error(
+            f"Unsupported screen resolution: {width}x{height}. The script requires 1920x1080."
+        )
+        sys.exit()
 
 
 def focus_rune_lite():
@@ -85,7 +99,7 @@ def click_blue(screenshot, click_delay):
     ) or set_to_copilot_price_and_quantity(screenshot, click_delay):
         return
 
-    mask = cv2.inRange(screenshot, np.array([100, 90, 50]), np.array([120, 115, 78]))
+    mask = cv2.inRange(screenshot, np.array([95, 90, 50]), np.array([120, 115, 78]))
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     if contours:
@@ -103,9 +117,9 @@ def set_to_copilot_price_and_quantity(screenshot, click_delay):
     loc = locate_image("images/settocopilot.png", screenshot=screenshot)
     if loc:
         click(*loc, click_delay)
+        logging.info("Clicked 'Set to CoPilot' button, now pressing Enter.")
         pyautogui.press("enter")
         time.sleep(sleep_delay)
-        logging.info("Set to CoPilot button clicked.")
         return True
     return False
 
@@ -120,9 +134,19 @@ def set_to_suggested_item(screenshot, click_delay):
     return False
 
 
+def get_elapsed_time_formatted():
+    elapsed_seconds = time.time() - start_time
+    minutes, seconds = divmod(int(elapsed_seconds), 60)
+    hours, minutes = divmod(minutes, 60)
+    return f"{hours:02}:{minutes:02}:{seconds:02}"
+
+
 def run_jFlipper(click_delay, sleep_delay):
     """Main script logic to automate flipping tasks in RuneLite."""
     pyautogui.FAILSAFE = True
+
+    # Check screen resolution
+    check_resolution()
 
     if not focus_rune_lite():
         logging.error(
@@ -146,7 +170,7 @@ def run_jFlipper(click_delay, sleep_delay):
             logging.info("Grand Exchange not open. Exiting script.")
             break
 
-        logging.info("Idling...Waiting for task...")
+        logging.info("Idling... Waiting for task...")
         screenshot = cv2.cvtColor(
             np.array(pyautogui.screenshot(region=region)), cv2.COLOR_RGB2BGR
         )
@@ -170,3 +194,5 @@ if __name__ == "__main__":
             pass  # Use default value
 
     run_jFlipper(click_delay, sleep_delay)
+    formatted_time = get_elapsed_time_formatted()
+    logging.info(f"Total run time: {formatted_time}")

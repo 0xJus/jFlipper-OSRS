@@ -184,7 +184,7 @@ def get_click_delay():
     try:
         click_delay = float(delay_spinbox.get())  # Get the value from the spinbox
     except ValueError:
-        click_delay = 0.7  # Set default if the input is invalid
+        click_delay = 1  # Set default if the input is invalid
 
 
 # Function to get and update the sleep delay from the spinbox
@@ -193,7 +193,7 @@ def get_sleep_delay():
     try:
         sleep_delay = float(sleep_spinbox.get())  # Get the value from the spinbox
     except ValueError:
-        sleep_delay = 0.7  # Set default if the input is invalid
+        sleep_delay = 1  # Set default if the input is invalid
 
 
 # Ensure the initial values for click and sleep delays are fetched at the start

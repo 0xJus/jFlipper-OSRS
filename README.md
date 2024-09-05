@@ -2,6 +2,8 @@
 
 ## Overview
 
+![GUI](src/images/settings/guiexample.png)
+
 This very simple Python script that automates flipping items in the OSRS Grand Exchange using the OSRS RuneLite client application along with the Flipping CoPilot RuneLite plugin. The script is designed to enhance efficiency by automating the buying and selling process of suggested copilot items to maximize hourly profits.
 
 ## Features
@@ -20,6 +22,8 @@ This very simple Python script that automates flipping items in the OSRS Grand E
 
 - **Automated Item Skipping**
 - **Automated Login Sequence**
+- **Automated World Switching**
+- **Error Handling**
 - **Discord Webhook Alerts**
 
 ## Requirements
