@@ -16,6 +16,11 @@ This very simple Python script that automates flipping items in the OSRS Grand E
 
 - **Customizable Settings**: Users can easily adjust various parameters within the GUI, such as sleep intervals and click delays, allowing for flexible and personalized automation settings.
 
+## Possible Future Implementations
+
+- **Automated Item Skipping**
+- **Automated Login Sequence**
+
 ## Requirements
 
 - **OSRS RuneLite**: [Download RuneLite](https://runelite.net/)
@@ -74,7 +79,7 @@ pip install -r requirements.txt
 
 ![Grand Exchange Window](src/images/settings/ge.png)
 
-### 3. Ensure SETUP is CORRECT:
+### 4. Ensure SETUP is CORRECT:
 
 **[IMPORTANT!] BEFORE you run the script ensure that there is nothing that could possible trigger a misclick in your view of the screen and the grand exchange, i.e other players, spells, teleports, pets, npcs etc.**
 
@@ -90,7 +95,7 @@ pip install -r requirements.txt
 
    OR
 
-2. Execute the CLI script from the command line:
+2. Execute the GUI script from the command line:
 
    ```bash
    python gui.py
@@ -102,7 +107,7 @@ pip install -r requirements.txt
 
 ## Important Notes
 
-- **Legal Disclaimer**: Use this script at your own risk. Automating actions in games may violate the terms of service with RuneLite, Flipping CoPilot, and RuneScape, leading to account penalties.
+- **Legal Disclaimer**: Use this script at your own risk! Automating actions in games violate the terms of service with RuneLite, Flipping CoPilot, and RuneScape, leading to account penalties and possible more severe consenquences.
 - **Optimization**: Ensure your script is fine-tuned to avoid detection, such as using appropriate sleep intervals and randomizing actions.
 
 ## License
