@@ -54,21 +54,15 @@ pip install -r requirements.txt
 
 ![Menu Entry Swapper](src/images/settings/menuentryswapper.png)
 
-#### Minimap Plugin:
+#### Stretched Mode & Minimap Plugin:
 
-![Minimap](src/images/settings/minimap.png)
+| ![Stretched Mode](src/images/settings/stretchedmode.png) | ![Minimap](src/images/settings/minimap.png) |
+| :------------------------------------------------------: | :-----------------------------------------: |
 
-#### Stretched Mode Plugin:
+#### Entity Hider & Display Settings Plugin:
 
-![Stretched Mode](src/images/settings/stretchedmode.png)
-
-#### Entity Hider Plugin:
-
-![Entity Hider](src/images/settings/entityhider.png)
-
-#### Display Settings Plugin:
-
-![Entity Hider](src/images/settings/displaysettings.png)
+| ![Entity Hider](src/images/settings/entityhider.png) | ![Display Settings](src/images/settings/displaysettings.png) |
+| :--------------------------------------------------: | :----------------------------------------------------------: |
 
 ### 2. Enable Flipping CoPilot Plugin:
 
@@ -98,6 +92,10 @@ pip install -r requirements.txt
    ```bash
    python gui.py
    ```
+
+   OR
+
+3. Run the script from the exe file located in the dist folder (Runs and instance of the GUI):
 
 ## Important Notes
 
