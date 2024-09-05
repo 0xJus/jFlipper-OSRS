@@ -76,7 +76,7 @@ pip install -r requirements.txt
 
 **Make sure the Grand Exchange window is **ALWAYS OPEN AND VISIBLE** while the script is running, Otherwise the script will exit as a result to reduce CPU usage**
 
-**[IMPORTANT!] BEFORE you run the script ensure that there is nothing that could possible trigger a misclick in your view of the screen and the grand exchange, i.e other players, spells, teleports, pets, npcs etc.**
+**[IMPORTANT!] Before you run the script ensure that there is nothing that could possible trigger a misclick in your view of the screen and the grand exchange, i.e other players, spells, teleports, pets, npcs etc.**
 
 | ![Grand Exchange Window](src/images/settings/ge.png) | ![Blank Screen Example](src/images/settings/blank.png) |
 | :--------------------------------------------------: | :----------------------------------------------------: |
