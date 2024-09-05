@@ -94,11 +94,25 @@ root.geometry("720x60")  # Set window size
 
 root.title("jFlipper")  # Set the window title
 
-root.iconbitmap("images/logo.ico")  # Set the window icon (replace with your icon path)
+root.iconbitmap(
+    "src/images/icon.ico"
+)  # Set the window icon (replace with your icon path)
 
 # ASCII art for display in console (optional)
 ascii_art = """
-<ASCII art here>
+
+          $$$$$$$$\ $$\ $$\                                                           $$$$$$\        $$\   
+          $$  _____|$$ |\__|                                                         $$$ __$$\     $$$$ |  
+      $$\ $$ |      $$ |$$\  $$$$$$\   $$$$$$\   $$$$$$\   $$$$$$\        $$\    $$\ $$$$\ $$ |    \_$$ |  
+      \__|$$$$$\    $$ |$$ |$$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\       \$$\  $$  |$$\$$\$$ |      $$ |  
+      $$\ $$  __|   $$ |$$ |$$ /  $$ |$$ /  $$ |$$$$$$$$ |$$ |  \__|       \$$\$$  / $$ \$$$$ |      $$ |  
+      $$ |$$ |      $$ |$$ |$$ |  $$ |$$ |  $$ |$$   ____|$$ |              \$$$  /  $$ |\$$$ |      $$ |  
+      $$ |$$ |      $$ |$$ |$$$$$$$  |$$$$$$$  |\$$$$$$$\ $$ |               \$  /   \$$$$$$  /$$\ $$$$$$\ 
+      $$ |\__|      \__|\__|$$  ____/ $$  ____/  \_______|\__|                \_/     \______/ \__|\______|
+$$\   $$ |                  $$ |      $$ |                                                                 
+\$$$$$$  |                  $$ |      $$ |                                                                 
+ \______/                   \__|      \__|                                                                 
+
 """
 
 print(ascii_art)  # Print the ASCII art in the console (not in the GUI)

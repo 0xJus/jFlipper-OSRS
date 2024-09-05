@@ -20,6 +20,7 @@ This very simple Python script that automates flipping items in the OSRS Grand E
 
 - **Automated Item Skipping**
 - **Automated Login Sequence**
+- **Discord Webhook Alerts**
 
 ## Requirements
 
@@ -73,17 +74,14 @@ pip install -r requirements.txt
 
 **Ensure the Flipping CoPilot plugin is **ALWAYS IN VIEW** on the screen when running the script. It is needed to detect when an abort offer suggested action is displayed on the screen from the Flipping CoPilot plugin and handle the cancel order accordingly.**
 
-### 3. Grand Exchange Window:
+### 3. Grand Exchange Window & Ensure SETUP is CORRECT:
 
 **Make sure the Grand Exchange window is **ALWAYS OPEN AND VISIBLE** while the script is running, Otherwise the script will exit as a result to reduce CPU usage**
 
-![Grand Exchange Window](src/images/settings/ge.png)
-
-### 4. Ensure SETUP is CORRECT:
-
 **[IMPORTANT!] BEFORE you run the script ensure that there is nothing that could possible trigger a misclick in your view of the screen and the grand exchange, i.e other players, spells, teleports, pets, npcs etc.**
 
-![Blank Screen Example](src/images/settings/blank.png)
+| ![Grand Exchange Window](src/images/settings/ge.png) | ![Blank Screen Example](src/images/settings/blank.png) |
+| :--------------------------------------------------: | :----------------------------------------------------: |
 
 ### Run the Script
 
@@ -100,10 +98,6 @@ pip install -r requirements.txt
    ```bash
    python gui.py
    ```
-
-   OR
-
-3. Run the exe file. (This will open an instance of the GUI)
 
 ## Important Notes
 
