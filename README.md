@@ -1,8 +1,8 @@
-# Flipper-OSRS
+# jFlipper-OSRS
 
 ## Overview
 
-This very simple Python script automates flipping items in the OSRS Grand Exchange using the OSRS RuneLite client application along with the Flipping CoPilot RuneLite plugin. The script is designed to enhance efficiency by automating the buying and selling process of suggested copilot items to maximize profits.
+This very simple Python script that automates flipping items in the OSRS Grand Exchange using the OSRS RuneLite client application along with the Flipping CoPilot RuneLite plugin. The script is designed to enhance efficiency by automating the buying and selling process of suggested copilot items to maximize hourly profits.
 
 ## Features
 
@@ -22,32 +22,79 @@ This very simple Python script automates flipping items in the OSRS Grand Exchan
 - **Flipping CoPilot RuneLite Plugin**: Install via the RuneLite plugin hub.
 - **Python 3.x**: [Download Python](https://www.python.org/)
 - **Python Packages**:
+  - `customtkinter`
+  - `Pillow`
   - `pyautogui`
+  - `pygetwindow`
   - `opencv-python`
   - `numpy`
+  - `keyboard`
 
 You can install the required packages using pip:
 
 ```bash
-pip install  -r requirements.txt
+pip install -r requirements.txt
 ```
 
-## Usage
+## How To Run:
 
-### Setup RuneLite:
+### 1 .Setup RuneLite & the following plugins:
 
-1. Install and configure the Flipping CoPilot plugin within RuneLite.
-2. Ensure RuneLite is running with the Grand Exchange window open.
+### Plugin Settings:
+
+**Ensure the following plugin settings are selected/enabled.**
+
+#### Menu Entry Swapper Plugin:
+
+![Menu Entry Swapper](src/images/settings/menuentryswapper.png)
+
+#### Minimap Plugin:
+
+![Minimap](src/images/settings/minimap.png)
+
+#### Stretched Mode Plugin:
+
+![Stretched Mode](src/images/settings/stretchedmode.png)
+
+#### Entity Hider Plugin:
+
+![Entity Hider](src/images/settings/entityhider.png)
+
+### 2. Enable Flipping CoPilot Plugin:
+
+**Ensure the Flipping CoPilot plugin is **ALWAYS IN VIEW** on the screen when running the script. It is needed to detect when an abort offer suggested action is displayed on the screen from the Flipping CoPilot plugin and handle the cancel order accordingly.**
+
+### 3. Grand Exchange Window:
+
+**Make sure the Grand Exchange window is **ALWAYS OPEN AND VISIBLE** while the script is running, Otherwise the script will exit as a result to reduce CPU usage**
+
+![Grand Exchange Window](images/ge.png)
+
+### 3. Ensure SETUP is CORRECT:
+
+**[IMPORTANT!] BEFORE you run the script ensure that there is nothing that could possible trigger a misclick in your view of the screen and the grand exchange, i.e other players, spells, teleports, pets, npcs etc.**
+
+![Grand Exchange Window](images/ge.png)
 
 ### Run the Script
 
-1. Execute the script from the command line:
+1. Execute the CLI script from the command line:
 
    ```bash
    python jFlipper.py
    ```
 
-2. **Automation Process**: The script will start monitoring the RuneLite interface, performing automated clicks and keystrokes to buy and sell items based on the configurations in the Flipping CoPilot plugin.
+   OR
+
+2. Execute the CLI script from the command line:
+
+   ```bash
+   python gui.py
+   ```
+
+   OR
+
+3. Run the exe file. (This will open an instance of the GUI)
 
 ## Important Notes
 
